@@ -41,6 +41,16 @@ How to run:
     make
     ./helloworld
 
+node
+----
+
+Example from Node.js web site. Create simple server.
+
+How to run:
+
+    cd node.js
+    node echo-server.js
+
 uv
 --
 
