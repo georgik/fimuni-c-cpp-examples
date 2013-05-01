@@ -74,6 +74,7 @@ Minunit testing
 Minunit is very minimalistic C testing framework. It contains just two lines of code.
 
 How to run:
+
     cd minunit
     make
     ./test
