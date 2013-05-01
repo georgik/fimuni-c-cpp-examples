@@ -25,6 +25,20 @@ How to run:
     ./example-02
     ./example-03
 
+curl
+----
+
+curl command line tool for sending requests via http and many other protocols.
+It is also able to create skeleton of C application for libcurl.
+
+How to run:
+
+    cd curl
+    ./generate-source-code.sh
+    ./compile-source-code.sh
+    ./download
+    
+
 GTK+
 ----
 
