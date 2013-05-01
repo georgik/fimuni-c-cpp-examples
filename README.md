@@ -25,6 +25,19 @@ How to run:
     ./example-02
     ./example-03
 
+Check - unit test
+-----------------
+
+Check is unit testing framework for C: http://check.sourceforge.net/
+
+This directory contains simple example. You can uncomment age++ to create bug and rerun tests.
+
+How to run:
+
+    cd check
+    make
+    ./test
+
 curl
 ----
 
