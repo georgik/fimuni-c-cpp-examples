@@ -68,6 +68,22 @@ How to run:
     make
     ./helloworld
 
+Gradle
+------
+
+Example of building C/C++ project by Gradle.
+Gradle is using build.gradle file in main project directory.
+Check out project layout. Source code is stored in src/main/cpp.
+This is defined by convention and Gradle is able to use it, no further configuration is needed.
+Gradle is able to determine compiler chain and use available compiler, e.g. g++ or Visual Studio.
+
+How to run (Linux):
+
+    cd gradle/hellomuni
+    gradle mainExecutable
+    cd build/binaries/mainExecutable
+    ./hellomuni
+
 Minunit testing
 ---------------
 
