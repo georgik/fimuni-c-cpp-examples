@@ -1,3 +1,2 @@
 *.sh text eof=lf
-gradle text eof=lf
-gradle/hello-with-wrapper/gradlew text eof=lf
+gradlew text eof=lf
