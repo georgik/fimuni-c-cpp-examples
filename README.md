@@ -78,7 +78,9 @@ because gradle is using "Build by convention".
 This is defined by convention and Gradle is able to use it, no further configuration is needed.
 Gradle is able to determine compiler chain and use available compiler, e.g. g++ or Visual Studio.
 
-How to run (Linux):
+Note for Visual Studio 2013: Use Gradle at least night build 1.10-20131122
+
+How to run:
 
     cd gradle/hellomuni
     gradle mainExecutable
