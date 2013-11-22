@@ -1,2 +1,3 @@
 *.sh text eof=lf
 gradle text eof=lf
+gradlew text eof=lf
