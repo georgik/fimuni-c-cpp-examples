@@ -87,6 +87,22 @@ How to run:
     cd build/binaries/mainExecutable
     ./hellomuni
 
+
+Gradle with wrapper
+-------------------
+
+In gradle/hellomuni example you have to download and install Gradle manually.
+Gradle projects are often sometimes with wrapper which downloads all necessary file with Gradle.
+It's sufficient to start wrapper and then you can work with local instance of Gradle.
+This is useful when you want to fix version of Gradle or simplify bootstrap process.
+
+How to run:
+
+    cd gradle/hello-with-wrapper
+    ./gradlew mainExecutable  (or .\gradle.bat mainExecutable for PowerShell)
+    cd build/binaries/mainExecutable
+    ./hello-with-wrapper
+
 Minunit testing
 ---------------
 
