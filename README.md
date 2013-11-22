@@ -92,7 +92,7 @@ Gradle with wrapper
 -------------------
 
 In gradle/hellomuni example you have to download and install Gradle manually.
-Gradle projects are often sometimes with wrapper which downloads all necessary file with Gradle.
+Gradle projects are sometimes provided with wrapper which downloads all necessary files with Gradle.
 It's sufficient to start wrapper and then you can work with local instance of Gradle.
 This is useful when you want to fix version of Gradle or simplify bootstrap process.
 
