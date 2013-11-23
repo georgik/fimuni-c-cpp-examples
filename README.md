@@ -78,7 +78,7 @@ because gradle is using "Build by convention".
 No further configuration is needed.
 Gradle is able to determine compiler chain and use available compiler, e.g. g++ or Visual Studio.
 
-Note for Visual Studio 2013: Use Gradle at least night build 1.10-20131122
+Note for Visual Studio 2013: Use Gradle at least night build 1.10-20131122230018
 
 How to run:
 
@@ -95,6 +95,9 @@ In gradle/hellomuni example you have to download and install Gradle manually.
 Gradle projects are sometimes provided with wrapper which downloads all necessary files with Gradle.
 It's sufficient to start wrapper and then you can work with local instance of Gradle.
 This is useful when you want to fix version of Gradle or simplify bootstrap process.
+
+Configuration file in gradle/hello-with-wrapper/gradle contains reference to Gradle with VS 2013
+support.
 
 How to run:
 
