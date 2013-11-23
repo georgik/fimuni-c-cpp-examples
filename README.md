@@ -71,6 +71,8 @@ How to run:
 Gradle
 ------
 
+### 01-hello-muni ###
+
 Example of building C/C++ project by Gradle.
 Gradle is using build.gradle file in main project directory.
 Check out project layout. Source code is stored in src/main/cpp, 
@@ -82,16 +84,15 @@ Note for Visual Studio 2013: Use Gradle at least night build 1.10-20131122230018
 
 How to run:
 
-    cd gradle/hellomuni
+    cd gradle/01-hello-muni
     gradle mainExecutable
     cd build/binaries/mainExecutable
-    ./hellomuni
+    ./01-hello-muni
 
 
-Gradle with wrapper
--------------------
+### 02-hello-muni-with-gradle-wrapper ###
 
-In gradle/hellomuni example you have to download and install Gradle manually.
+It's not necessary to download Gradle manually like in previous example.
 Gradle projects are sometimes provided with wrapper which downloads all necessary files with Gradle.
 It's sufficient to start wrapper and then you can work with local instance of Gradle.
 This is useful when you want to fix version of Gradle or simplify bootstrap process.
@@ -101,10 +102,22 @@ support.
 
 How to run:
 
-    cd gradle/hello-with-wrapper
+    cd gradle/02-hello-muni-with-gradle-wrapper
     ./gradlew mainExecutable  (or .\gradle.bat mainExecutable for PowerShell)
     cd build/binaries/mainExecutable
-    ./hello-with-wrapper
+    ./02-hello-muni-with-gradle-wrapper
+
+### 03-hello-muni-with-debug ###
+
+Current implementation of C++ support in Gradle is in early stage, but it's very promising.
+This example shows how to update build script to add debug flags for compilers like GCC or VS.
+
+How to run:
+
+    cd gradle/03-hello-muni-with-debug
+    gradle mainExecutable
+    cd build/binaries/mainExecutable
+    ./03-hello-muni-with-debug
 
 Minunit testing
 ---------------
