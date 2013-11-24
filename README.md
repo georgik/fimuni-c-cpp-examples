@@ -133,7 +133,7 @@ How to run:
 REST SDK
 --------
 
-Example based on C++ REST SDK - Casablanca which has support for asyncrhonous calls.
+Example based on C++ REST SDK - Casablanca which has support for asynchronous calls.
 Documentation: http://msdn.microsoft.com/en-us/library/jj969455.aspx
 Project page: https://casablanca.codeplex.com/
 This example requires Visual Studio 2013 with NuGet.
