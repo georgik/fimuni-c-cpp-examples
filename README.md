@@ -130,6 +130,22 @@ How to run:
     make
     ./test
 
+C++ REST
+--------
+
+Example based on C++ REST SDK - Casablanca which has support for asyncrhonous calls.
+Documentation: http://msdn.microsoft.com/en-us/library/jj969455.aspx
+Project page: https://casablanca.codeplex.com/
+This example requires Visual Studio 2013 with NuGet.
+
+How to run (PowerShell + VS 2013):
+
+    cd rest\\rest-client
+    ii rest-client.sln
+    right click the project and select: Manage NuGet Packages for solution
+    restore C++ REST SDK
+    CTRL+F5 to run the project
+
 node
 ----
 
