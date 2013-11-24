@@ -130,7 +130,7 @@ How to run:
     make
     ./test
 
-C++ REST
+REST SDK
 --------
 
 Example based on C++ REST SDK - Casablanca which has support for asyncrhonous calls.
@@ -140,7 +140,7 @@ This example requires Visual Studio 2013 with NuGet.
 
 How to run (PowerShell + VS 2013):
 
-    cd rest\\rest-client
+    cd rest\rest-client
     ii rest-client.sln
     right click the project and select: Manage NuGet Packages for solution
     restore C++ REST SDK
