@@ -1,7 +1,8 @@
 // 02-sdl2-video.cpp : SDL2 example - initialize video and display image
 //
 
-#include "stdafx.h"
+#include <stdio.h>
+#include <tchar.h>
 #include "SDL.h"
 
 int _tmain(int argc, _TCHAR* argv[]) {	
