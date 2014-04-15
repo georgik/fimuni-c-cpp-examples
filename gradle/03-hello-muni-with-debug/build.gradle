@@ -1,4 +1,4 @@
-apply plugin: 'cpp-exe'
+apply plugin: 'cpp'
 
 
 // Based on http://www.gradle.org/docs/current/userguide/nativeBinaries.html
@@ -10,5 +10,10 @@ binaries.all {
         cppCompiler.args '/Zi'
         cppCompiler.define 'DEBUG'
         linker.args '/DEBUG'
+    }
+}
+
+executables {
+    main {
     }
 }
