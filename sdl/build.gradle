@@ -31,7 +31,7 @@ task copySdlLib(type: Copy) {
 
 task copySdlInclude(type: Copy) {
     description = "Copy SDL2 include to location compatible with Linux builds."
-    from "build/SDL2/include"
+    from "build/SDL2-2.0.3/include"
     into "build/include/SDL2"
 }
 
