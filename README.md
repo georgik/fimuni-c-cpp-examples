@@ -178,7 +178,7 @@ It is possible to generate project for Visual Studio:
 
 Compiled binary will be stored in:
 
-    build\binaries\mainExecutable
+    build/binaries/mainExecutable
 
 node
 ----
