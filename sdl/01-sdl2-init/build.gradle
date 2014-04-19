@@ -1,0 +1,28 @@
+apply plugin: 'c'
+apply plugin: 'visual-studio'
+
+sources {
+    main {
+        c {
+            source {
+                // Include just source, avoid including *.swp and other helper files
+                include "**/*.c"
+            }
+            exportedHeaders {
+                srcDir "../build/SDL2-2.0.3/include"
+            }
+        }
+    }
+}
+
+executables {
+    main {
+        binaries.all {
+            if (toolChain in VisualCpp) {
+                linker.args "/machine:X86", "/SUBSYSTEM:WINDOWS", "../build/SDL2-2.0.3/lib/x86/SDL2.lib"
+                //linker.args "/SUBSYSTEM:WINDOWS", "/LIBPATH:../build/SDL2-2.0.3/lib/x86/", "SDL2.lib"
+            }
+        }
+    }
+}
+

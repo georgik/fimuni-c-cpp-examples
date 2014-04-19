@@ -1,0 +1,31 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'de.undercouch:gradle-download-task:1.0'
+    }
+}
+
+import de.undercouch.gradle.tasks.download.Download
+
+
+task downloadSdl(type: Download) {
+    description = "Download SDL2 library ZIP file."
+    src 'http://libsdl.org/release/SDL2-devel-2.0.3-VC.zip'
+    dest 'build/sdl2.zip'
+}
+
+task extractSdl(type: Copy) {
+    description = "Unpack SDL2 library"
+    from zipTree('build/sdl2.zip')
+    into 'build/'
+}
+
+task prepare {
+    description = "Prepare build environment for SDL2"
+}
+
+
+extractSdl.dependsOn downloadSdl
+prepare.dependsOn extractSdl
