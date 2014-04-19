@@ -19,7 +19,8 @@ executables {
     main {
         binaries.all {
             if (toolChain in VisualCpp) {
-                linker.args "/machine:X86", "/SUBSYSTEM:WINDOWS", "../build/SDL2-2.0.3/lib/x86/SDL2.lib"
+                cCompiler.args "/MD"
+                linker.args "/SUBSYSTEM:CONSOLE", "/LIBPATH:../build/SDL2-2.0.3/lib/x86/", "SDL2main.lib", "SDL2.lib"
                 //linker.args "/SUBSYSTEM:WINDOWS", "/LIBPATH:../build/SDL2-2.0.3/lib/x86/", "SDL2.lib"
             }
         }

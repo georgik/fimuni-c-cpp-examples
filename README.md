@@ -146,19 +146,39 @@ How to run (PowerShell + VS 2013):
     restore C++ REST SDK
     CTRL+F5 to run the project
 
-Simple DirectMedia Layer 2
---------------------------
+## Simple DirectMedia Layer 2
 
 SDL2 is multiplatform library suitable for developing applications like games.
-Example is based on SDL2.
-You can download version for Visual Studio at: http://libsdl.org/release/SDL2-devel-2.0.1-VC.zip
-This library is also available in all common Linux ditributions.
+You can use Gradle to build SDL2 examples.
 
-How to run (PowerShell + VS 2013):
+### Preparing dependencies for Windows
 
-    cd sdl
-    .\DownloadLibrary.ps1
-    ii .\sdl2-sample.sln
+Root project contains reference to SDL2 library. Type:
+
+    gradle prepare
+
+It will download Windows version of SDL2 library for all projects.
+Libraries will be placed in directory build.
+Now you can build earch of subprojects.
+
+### 01-sdl2-init
+
+Simple example - init and quit SDL.
+How to build:
+
+    gradle clean mainExecutable
+
+Shorter version:
+
+    gradle clean mE
+
+It is possible to generate project for Visual Studio:
+
+    gradle mainVisualStudio
+
+Compiled binary will be stored in:
+
+    build\binaries\mainExecutable
 
 node
 ----
