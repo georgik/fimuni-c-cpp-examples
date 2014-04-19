@@ -1,3 +1,5 @@
+apply plugin: 'c'
+
 buildscript {
     repositories {
         mavenCentral()
@@ -22,10 +24,25 @@ task extractSdl(type: Copy) {
     into 'build/'
 }
 
+task copySdlLib(type: Copy) {
+    from 'build/SDL2-2.0.3/lib/x86'
+    into 'build/lib/'
+}
+
+task copySdlInclude(type: Copy) {
+    description = "Copy SDL2 include to location compatible with Linux builds."
+    from "build/SDL2/include"
+    into "build/include/SDL2"
+}
+
 task prepare {
     description = "Prepare build environment for SDL2"
 }
 
 
 extractSdl.dependsOn downloadSdl
-prepare.dependsOn extractSdl
+copySdlLib.dependsOn extractSdl
+copySdlInclude.dependsOn extractSdl
+
+prepare.dependsOn copySdlInclude
+prepare.dependsOn copySdlLib

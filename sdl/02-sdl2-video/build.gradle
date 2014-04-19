@@ -5,11 +5,10 @@ sources {
     main {
         c {
             source {
-                // Include just source, avoid including *.swp and other helper files
                 include "**/*.c"
             }
             exportedHeaders {
-                srcDir "../build/SDL2-2.0.3/include"
+                srcDir "../build/include"
             }
         }
     }
@@ -20,7 +19,9 @@ executables {
         binaries.all {
             if (toolChain in VisualCpp) {
                 cCompiler.args "/MD"
-                linker.args "/SUBSYSTEM:CONSOLE", "/LIBPATH:../build/SDL2-2.0.3/lib/x86/", "SDL2main.lib", "SDL2.lib"
+                linker.args "/SUBSYSTEM:CONSOLE", "/LIBPATH:../build/lib/", "SDL2main.lib", "SDL2.lib"
+            } else if (toolChain in Gcc) {
+                linker.args "-lSDL2"
             }
         }
     }
