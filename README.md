@@ -180,6 +180,27 @@ Compiled binary will be stored in:
 
     build/binaries/mainExecutable
 
+Copy required resources/dll to mainExecutable by command:
+
+    gradle prepare
+
+### 02-sdl2-video
+
+Graphic initialization example for SDL2.
+Initialize graphic interface, load BMP file and display it.
+
+Commands (PowerShell):
+
+    gradle prepare mE
+    cd build\binaries\mainExecutable
+    .\main.exe
+
+Commands (Shell):
+
+    gradle prepare mE
+    cd build/binaries/mainExecutable
+    ./main
+
 node
 ----
 
