@@ -27,3 +27,9 @@ executables {
     }
 }
 
+task prepare(type: Copy) {
+    description "Copy DLL dependencies"
+    from "../build/lib/"
+    from "src/main/resources"
+    into "build/binaries/mainExecutable"
+}
