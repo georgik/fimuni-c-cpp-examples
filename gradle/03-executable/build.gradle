@@ -1,0 +1,7 @@
+apply plugin: 'c'
+
+executables {
+    main {
+    }
+}
+

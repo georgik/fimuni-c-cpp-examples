@@ -1,0 +1,5 @@
+task hello {
+    description = "Say Hello :-)"
+    println "Hello FI MUNI!"
+}
+
