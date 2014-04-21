@@ -1,0 +1,8 @@
+apply plugin: 'c'
+apply plugin: 'visual-studio'
+
+executables {
+    main {
+    }
+}
+
