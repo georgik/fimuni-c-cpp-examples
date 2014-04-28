@@ -112,7 +112,7 @@ How to run (PowerShell):
     cd build\binaries\mainExecutable
     .\main.exe
 
-### 04-visua-studio ###
+### 04-visual-studio ###
 
 Gradle C plugin example with support for Visual Studio solution files.
 
