@@ -68,8 +68,72 @@ How to run:
     make
     ./helloworld
 
-Gradle
-------
+Gradle basics and C plugin
+--------------------------
+
+### 00-empty-project ###
+
+Empty gradle project.
+
+How to run:
+
+    gradle tasks
+
+### 01-hello-task ###
+
+Simple task to print string during build.
+
+How to run:
+
+    gradle tasks
+    gradle hello
+
+### 02-c-plugin ###
+
+Simple usage C plugin. There is no working C code in this example.
+
+How to run:
+
+    gradle tasks
+
+### 03-executable ###
+
+Gradle with C plugin with simple Hello application.
+
+How to run (Shell):
+
+    gradle mE
+    cd build/binaries/mainExecutable
+    ./main
+
+How to run (PowerShell):
+
+    gradle mE
+    cd build\binaries\mainExecutable
+    .\main.exe
+
+### 04-visua-studio ###
+
+Gradle C plugin example with support for Visual Studio solution files.
+
+How to run (PowerShell):
+
+    gradle mainVisualStudio
+    ii mainExe.sln
+
+### 05-debian-package ###
+
+Gradle plugin for packaging Debian/Ubuntu package. Gradle downloads plugin from repository.
+
+How to run: 
+
+    gradle helloExecutable prepare buildDeb
+
+Debian package is available in directory build.
+
+
+Gradle C++ plugin
+-----------------
 
 ### 01-hello-muni ###
 
@@ -84,7 +148,7 @@ Note for Visual Studio 2013: Use Gradle at least night build 1.10-20131122230018
 
 How to run:
 
-    cd gradle/01-hello-muni
+    cd gradle-cpp-plugin/01-hello-muni
     gradle mainExecutable
     cd build/binaries/mainExecutable
     ./01-hello-muni
@@ -102,7 +166,7 @@ support.
 
 How to run:
 
-    cd gradle/02-hello-muni-with-gradle-wrapper
+    cd gradle-cpp-plugin/02-hello-muni-with-gradle-wrapper
     ./gradlew mainExecutable  (or .\gradle.bat mainExecutable for PowerShell)
     cd build/binaries/mainExecutable
     ./02-hello-muni-with-gradle-wrapper
@@ -114,7 +178,7 @@ This example shows how to update build script to add debug flags for compilers l
 
 How to run:
 
-    cd gradle/03-hello-muni-with-debug
+    cd gradle-cpp-plugin/03-hello-muni-with-debug
     gradle mainExecutable
     cd build/binaries/mainExecutable
     ./03-hello-muni-with-debug

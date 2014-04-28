@@ -20,11 +20,18 @@ executables {
         binaries.all {
             if (toolChain in VisualCpp) {
                 cCompiler.args "/MD"
-                linker.args "/SUBSYSTEM:CONSOLE", "/LIBPATH:../build/lib/", "SDL2main.lib", "SDL2.lib"
+                linker.args "/SUBSYSTEM:CONSOLE", "/LIBPATH:../build/lib/", 
+                    "SDL2main.lib", "SDL2.lib"
             } else if (toolChain in Gcc) {
                 linker.args "-lSDL2"
             }
         }
     }
+}
+
+task prepare(type: Copy) {
+    description "Copy DLL dependencies"
+    from "../build/lib/"
+    into "build/binaries/mainExecutable"
 }
 
