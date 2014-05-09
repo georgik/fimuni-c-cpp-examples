@@ -1,5 +1,9 @@
 task hello {
+    // Loaded in configuration phase
     description = "Say Hello :-)"
-    println "Hello FI MUNI!"
+    doLast {
+        // Executed in execution phase
+        println "Hello FI MUNI!"
+    }
 }
 
