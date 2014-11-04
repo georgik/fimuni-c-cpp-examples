@@ -1,6 +1,8 @@
 FI MUNI - C and C++ examples
 ============================
 
+Repo moved to: https://github.com/ysoftdevs/cpp-examples
+
 Examples related to talks at FI MUNI.
 Georgik's blog: http://georgik.sinusgear.com
 
